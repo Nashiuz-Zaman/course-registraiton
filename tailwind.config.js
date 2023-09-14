@@ -6,7 +6,11 @@ export default {
       colors: {
         textPrimary: "#1C1B1B",
         textLight: "#1c1b1b99",
-        textSecondary: "#2F80ED",
+        primary: "#2F80ED",
+        primaryDark: "#2a73d5",
+      },
+      borderRadius: {
+        default: "8px",
       },
     },
   },

@@ -4,20 +4,18 @@ import PropTypes from "prop-types";
 // components
 import Card from "../Card/Card";
 
-function Cards({ cards }) {
+function Cards({ cardsInfo }) {
   return (
-    <div>
-      <ul>
-        {cards.map((card) => (
-          <Card key={card.id} cardInfo={card}></Card>
-        ))}
-      </ul>
-    </div>
+    <ul className="grid grid-cols-3 gap-6">
+      {cardsInfo.map((card) => (
+        <Card key={card.id} cardInfo={card}></Card>
+      ))}
+    </ul>
   );
 }
 
 Cards.propTypes = {
-  cards: PropTypes.array.isRequired,
+  cardsInfo: PropTypes.array.isRequired,
 };
 
 export default Cards;
