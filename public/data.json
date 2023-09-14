@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "courseName": "Introduction to C Programming",
+    "imgSrc": "https://i.ibb.co/QJmCd6n/course-1.webp",
+    "description": "Learn the fundamentals of C programming, from basic syntax to data structures and algorithms.",
+    "credit": 1,
+    "price": 15000
+  },
+  {
+    "id": 2,
+    "courseName": "Introduction to Algorithms",
+    "imgSrc": "https://i.ibb.co/9wGb2Dz/course-2.webp",
+    "description": "Explore essential algorithms and problem-solving techniques in this foundational course.",
+    "credit": 2,
+    "price": 25000
+  },
+  {
+    "id": 3,
+    "courseName": "Introduction to C++ for DSA",
+    "imgSrc": "https://i.ibb.co/nRBcVY6/course-3.webp",
+    "description": "Master C++ programming for data structures and algorithms, with practical examples.",
+    "credit": 10,
+    "price": 10000
+  },
+  {
+    "id": 4,
+    "courseName": "Basic Data Structures",
+    "imgSrc": "https://i.ibb.co/xg95DKd/course-4.webp",
+    "description": "Gain expertise in fundamental data structures like arrays, lists, and trees.",
+    "credit": 5,
+    "price": 35000
+  },
+  {
+    "id": 5,
+    "courseName": "Introduction to OOP Python",
+    "imgSrc": "https://i.ibb.co/990BFFS/course-5.webp",
+    "description": "Discover object-oriented programming principles using Python, perfect for beginners.",
+    "credit": 5,
+    "price": 19000
+  },
+  {
+    "id": 6,
+    "courseName": "Software Engineering",
+    "imgSrc": "https://i.ibb.co/7XKds8p/course-6.webp",
+    "description": "Learn software engineering methodologies and best practices for building robust applications.",
+    "credit": 2,
+    "price": 23000
+  },
+  {
+    "id": 7,
+    "courseName": "AWS, Cloud Computing",
+    "imgSrc": "https://i.ibb.co/605sMW0/course-7.webp",
+    "description": "Dive into Amazon Web Services (AWS) and cloud computing to deploy scalable solutions.",
+    "credit": 5,
+    "price": 35000
+  },
+  {
+    "id": 8,
+    "courseName": "Database (MySQL)",
+    "imgSrc": "https://i.ibb.co/9pwBM4v/course-8.webp",
+    "description": "Master MySQL database management, from designing schemas to querying data efficiently.",
+    "credit": 5,
+    "price": 19000
+  },
+  {
+    "id": 9,
+    "courseName": "Problem-Solving Part",
+    "imgSrc": "https://i.ibb.co/mJNH9C1/course-9.webp",
+    "description": "Enhance your problem-solving skills and algorithms knowledge to tackle complex challenges.",
+    "credit": 2,
+    "price": 23000
+  }
+]
