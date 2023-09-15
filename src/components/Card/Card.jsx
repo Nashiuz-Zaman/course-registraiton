@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import dollarIcon from "./../../assets/icons/dollar-icon.svg";
 import creditIcon from "./../../assets/icons/credit-icon.svg";
 
-function Card({ cardInfo }) {
+function Card({ cardInfo, handleClickSelect }) {
   const { courseName, imgSrc, description, credit, price } = cardInfo;
 
   return (
@@ -48,7 +48,10 @@ function Card({ cardInfo }) {
         </div>
 
         {/* select button */}
-        <button className="block w-full text-[1.2rem] bg-primary hover:bg-primaryDark transition-all duration-300 text-white py-[9px] font-semibold rounded-default">
+        <button
+          className="block w-full text-[1.2rem] bg-primary hover:bg-primaryDark transition-all duration-300 text-white py-[9px] font-semibold rounded-default"
+          onClick={() => handleClickSelect(cardInfo)}
+        >
           Select
         </button>
       </div>
@@ -58,6 +61,7 @@ function Card({ cardInfo }) {
 
 Card.propTypes = {
   cardInfo: PropTypes.object.isRequired,
+  handleClickSelect: PropTypes.func.isRequired,
 };
 
 export default Card;
