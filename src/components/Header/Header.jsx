@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function Header({ headingText }) {
   return (
-    <header className="mb-12">
+    <header className="mb-8">
       <h1 className="text-[2rem] font-bold text-center leading-[normal]">
         {headingText}
       </h1>
