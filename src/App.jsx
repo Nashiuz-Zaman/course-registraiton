@@ -30,13 +30,23 @@ function App() {
       (course) => course.id === courseToAdd.id
     );
 
-    // if the course is already on the list then set the same course error to true and set the warning message state accordingly
-    if (foundCourse !== undefined) {
+    // if
+    if (foundCourse !== undefined && totalCreditHrs + courseToAdd.credit > 20) {
+      setWarningMessage(
+        `${courseToAdd.courseName} already added. Also total credit hours cannot exceed 20.`
+      );
       setError(true);
-      setWarningMessage(`${courseToAdd.courseName} already added`);
       return;
     }
 
+    // if the course is already on the list then set the error to true and set the warning message state accordingly
+    if (foundCourse !== undefined) {
+      setWarningMessage(`${courseToAdd.courseName} already added`);
+      setError(true);
+      return;
+    }
+
+    // if the credit hours are supposed to be more than 20 hours then show the warning message accordingly and show error warning
     if (totalCreditHrs + courseToAdd.credit > 20) {
       setWarningMessage(`Total credit hours cannot exceed 20`);
       setError(true);

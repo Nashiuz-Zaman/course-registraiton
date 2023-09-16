@@ -7,11 +7,11 @@ import warningIcon from "./../../assets/icons/warning-icon.svg";
 function Warning({ show, message, handleClickClose }) {
   return (
     <div
-      className={`fixed bottom-10 right-10 bg-danger rounded-default text-white px-3 py-5 z-20 invisible opacity-0 transition-all duration-300 ${
+      className={`fixed bottom-10 right-10 max-w-[25rem] bg-danger rounded-default text-white px-3 py-5 z-20 invisible opacity-0 transition-all duration-300 ${
         show ? "!visible !opacity-100" : ""
       } `}
     >
-      <div className="flex items-center gap-1 mb-3">
+      <div className="flex items-center gap-2 mb-3">
         <img className="filter-white" src={warningIcon} alt="warning sign" />
         <p className="font-medium">{message}</p>
       </div>
