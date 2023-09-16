@@ -4,15 +4,23 @@ import PropTypes from "prop-types";
 // icon
 import warningIcon from "./../../assets/icons/warning-icon.svg";
 
-function Warning({ show, message }) {
+function Warning({ show, message, handleClickClose }) {
   return (
     <div
-      className={`fixed top-10 left-1/2 -translate-x-1/2 flex items-center border bg-yellow-500 rounded-default px-3 py-5 gap-1 z-20 invisible opacity-0 transition-all duration-300 ${
+      className={`fixed bottom-10 right-10 bg-danger rounded-default text-white px-3 py-5 z-20 invisible opacity-0 transition-all duration-300 ${
         show ? "!visible !opacity-100" : ""
       } `}
     >
-      <img src={warningIcon} alt="warning sign" />
-      <p className="font-medium">{message}</p>
+      <div className="flex items-center gap-1 mb-3">
+        <img className="filter-white" src={warningIcon} alt="warning sign" />
+        <p className="font-medium">{message}</p>
+      </div>
+      <button
+        onClick={handleClickClose}
+        className="text-white border border-white rounded-default px-3 py-1 block w-max mx-auto"
+      >
+        Close
+      </button>
     </div>
   );
 }
@@ -20,6 +28,7 @@ function Warning({ show, message }) {
 Warning.propTypes = {
   show: PropTypes.bool.isRequired,
   message: PropTypes.string.isRequired,
+  handleClickClose: PropTypes.func.isRequired,
 };
 
 export default Warning;
