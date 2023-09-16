@@ -4,18 +4,34 @@ import { useState, useEffect } from "react";
 // component
 import Header from "./components/Header/Header";
 import Cards from "./components/Cards/Cards";
+import CourseCart from "./components/CourseCart/CourseCart";
 import Warning from "./components/Warning/Warning";
 
 function App() {
   // declare the states
   const [cards, setCards] = useState([]);
   const [selectedCourses, setSelectedCourses] = useState([]);
-  const [sameCourseError, setSameCourseError] = useState(false);
+  const [error, setError] = useState(false);
+  const [totalCreditHrs, setTotalCreditHrs] = useState(0);
+  const [totalCost, setTotalCost] = useState(0);
   const [warningMessage, setWarningMessage] = useState("");
+
+  // declare the toast close button handler
+  const handleClickClose = () => {
+    setError(false);
+  };
 
   // declare Select button click handler
   const handleClickSelect = (courseToAdd) => {
-    setSameCourseError(false);
+    setError(false);
+
+    const remainingCreditHrs = 20 - totalCreditHrs;
+
+    if (remainingCreditHrs < 0) {
+      setError(true);
+      setWarningMessage(`Total credit hours cannot exceed 20`);
+      return;
+    }
 
     // check if the course is already on the list
     const foundCourse = selectedCourses.find(
@@ -24,8 +40,8 @@ function App() {
 
     // if the course is already on the list then set the same course error to true and set the warning message state accordingly
     if (foundCourse !== undefined) {
-      setSameCourseError(true);
-      setWarningMessage(`${courseToAdd.courseName} already added.`);
+      setError(true);
+      setWarningMessage(`${courseToAdd.courseName} already added`);
       return;
     }
 
@@ -33,6 +49,19 @@ function App() {
     if (!foundCourse) {
       const newSelectedCourses = [...selectedCourses, courseToAdd];
       setSelectedCourses(newSelectedCourses);
+      // find total cost of the courses in the list
+      const totalCost = newSelectedCourses.reduce(
+        (acc, course) => acc + course.price,
+        0
+      );
+      setTotalCost(totalCost);
+
+      // find total credit hrs of the courses in the list
+      const totalCreditHrs = newSelectedCourses.reduce(
+        (acc, course) => acc + course.credit,
+        0
+      );
+      setTotalCreditHrs(totalCreditHrs);
     }
   };
 
@@ -43,30 +72,30 @@ function App() {
       .then((data) => setCards(data));
   }, []);
 
-  //  create a timer for the same course error warning message to fade away after a certain period of time
-  useEffect(() => {
-    let sameCourseErrorTimer;
-    if (sameCourseError === true) {
-      sameCourseErrorTimer = setTimeout(() => {
-        setSameCourseError(false);
-        clearTimeout(sameCourseErrorTimer);
-        sameCourseErrorTimer = null;
-      }, 2500);
-    }
-
-    return () => {
-      clearTimeout(sameCourseErrorTimer);
-      sameCourseErrorTimer = null;
-    };
-  }, [sameCourseError]);
-
   // return jsx
   return (
     <div className="pt-[3.125rem] pb-[6.25rem] max-w-[90rem] mx-auto text-textPrimary">
       <Header headingText="Course Registration" />
-      <Warning show={sameCourseError} message={warningMessage}></Warning>
+      <Warning
+        show={error}
+        handleClickClose={handleClickClose}
+        message={warningMessage}
+      ></Warning>
       <main className="grid grid-cols-[3fr_1fr] gap-6">
-        <Cards handleClickSelect={handleClickSelect} cardsInfo={cards}></Cards>
+        <section>
+          <Cards
+            handleClickSelect={handleClickSelect}
+            cardsInfo={cards}
+          ></Cards>
+        </section>
+
+        <section>
+          <CourseCart
+            totalCost={totalCost}
+            totalCreditHrs={totalCreditHrs}
+            selectedCourses={selectedCourses}
+          ></CourseCart>
+        </section>
       </main>
     </div>
   );
