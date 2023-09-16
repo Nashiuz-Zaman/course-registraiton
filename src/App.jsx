@@ -25,9 +25,7 @@ function App() {
   const handleClickSelect = (courseToAdd) => {
     setError(false);
 
-    const remainingCreditHrs = 20 - totalCreditHrs;
-
-    if (remainingCreditHrs < 0) {
+    if (totalCreditHrs + courseToAdd.credit > 20) {
       setError(true);
       setWarningMessage(`Total credit hours cannot exceed 20`);
       return;
