@@ -3,7 +3,7 @@
     "id": 1,
     "courseName": "Introduction to C Programming",
     "imgSrc": "https://i.ibb.co/QJmCd6n/course-1.webp",
-    "description": "Master the fundamentals of C programming, covering syntax, data structures, and algorithms for efficient software development.",
+    "details": "Master the fundamentals of C programming, covering syntax, data structures, and algorithms for efficient software development.",
     "credit": 1,
     "price": 15000
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "courseName": "Introduction to Algorithms",
     "imgSrc": "https://i.ibb.co/9wGb2Dz/course-2.webp",
-    "description": "Explore essential algorithms and problem-solving techniques, gaining a solid foundation for algorithmic thinking and problem-solving.",
+    "details": "Explore essential algorithms and problem-solving techniques, gaining a solid foundation for algorithmic thinking and problem-solving.",
     "credit": 2,
     "price": 25000
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "courseName": "Introduction to C++ for DSA",
     "imgSrc": "https://i.ibb.co/nRBcVY6/course-3.webp",
-    "description": "Become proficient in C++ for data structures and algorithms, with hands-on examples and practical applications.",
+    "details": "Become proficient in C++ for data structures and algorithms, with hands-on examples and practical applications.",
     "credit": 10,
     "price": 10000
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "courseName": "Basic Data Structures",
     "imgSrc": "https://i.ibb.co/xg95DKd/course-4.webp",
-    "description": "Build expertise in fundamental data structures like arrays, lists, and trees, enhancing your programming skills.",
+    "details": "Build expertise in fundamental data structures like arrays, lists, and trees, enhancing your programming skills.",
     "credit": 5,
     "price": 35000
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "courseName": "Introduction to OOP Python",
     "imgSrc": "https://i.ibb.co/990BFFS/course-5.webp",
-    "description": "Discover object-oriented programming principles using Python, making it easy for beginners to create efficient code.",
+    "details": "Discover object-oriented programming principles using Python, making it easy for beginners to create efficient code.",
     "credit": 5,
     "price": 19000
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "courseName": "Software Engineering",
     "imgSrc": "https://i.ibb.co/7XKds8p/course-6.webp",
-    "description": "Learn software engineering methodologies and best practices, ensuring robust and scalable application development.",
+    "details": "Learn software engineering methodologies and best practices, ensuring robust and scalable application development.",
     "credit": 2,
     "price": 23000
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "courseName": "AWS, Cloud Computing",
     "imgSrc": "https://i.ibb.co/605sMW0/course-7.webp",
-    "description": "Delve into Amazon Web Services (AWS) and cloud computing to deploy highly scalable and efficient solutions.",
+    "details": "Delve into Amazon Web Services (AWS) and cloud computing to deploy highly scalable and efficient solutions.",
     "credit": 5,
     "price": 35000
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "courseName": "Database (MySQL)",
     "imgSrc": "https://i.ibb.co/9pwBM4v/course-8.webp",
-    "description": "Master MySQL database management, covering schema design, data querying, and optimization for real-world applications.",
+    "details": "Master MySQL database management, covering schema design, data querying, and optimization for real-world applications.",
     "credit": 5,
     "price": 19000
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "courseName": "Problem-Solving Part",
     "imgSrc": "https://i.ibb.co/mJNH9C1/course-9.webp",
-    "description": "Enhance your problem-solving skills and deepen your knowledge of algorithms, preparing you for complex challenges.",
+    "details": "Enhance your problem-solving skills and deepen your knowledge of algorithms, preparing you for complex challenges.",
     "credit": 2,
     "price": 23000
   }

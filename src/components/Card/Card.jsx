@@ -6,7 +6,7 @@ import dollarIcon from "./../../assets/icons/dollar-icon.svg";
 import creditIcon from "./../../assets/icons/credit-icon.svg";
 
 function Card({ cardInfo, handleClickSelect }) {
-  const { courseName, imgSrc, description, credit, price } = cardInfo;
+  const { courseName, imgSrc, details, credit, price } = cardInfo;
 
   return (
     <div className="p-4 leading-[normal] flex flex-col">
@@ -22,9 +22,9 @@ function Card({ cardInfo, handleClickSelect }) {
       {/* course title */}
       <h3 className="font-semibold text-[1.2rem] mb-3">{courseName}</h3>
 
-      {/* course description */}
+      {/* course details */}
       <p className="text-textLight text-sm leading-[1.5rem] font-medium mb-4">
-        {description}
+        {details}
       </p>
 
       {/* course additional info and select button */}

@@ -25,12 +25,6 @@ function App() {
   const handleClickSelect = (courseToAdd) => {
     setError(false);
 
-    if (totalCreditHrs + courseToAdd.credit > 20) {
-      setError(true);
-      setWarningMessage(`Total credit hours cannot exceed 20`);
-      return;
-    }
-
     // check if the course is already on the list
     const foundCourse = selectedCourses.find(
       (course) => course.id === courseToAdd.id
@@ -40,6 +34,12 @@ function App() {
     if (foundCourse !== undefined) {
       setError(true);
       setWarningMessage(`${courseToAdd.courseName} already added`);
+      return;
+    }
+
+    if (totalCreditHrs + courseToAdd.credit > 20) {
+      setWarningMessage(`Total credit hours cannot exceed 20`);
+      setError(true);
       return;
     }
 
