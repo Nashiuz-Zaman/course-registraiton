@@ -23,7 +23,7 @@ function Card({ cardInfo, handleClickSelect }) {
       <h3 className="font-semibold text-[1.2rem] mb-3">{courseName}</h3>
 
       {/* course description */}
-      <p className="text-textLight leading-[1.5rem] font-medium mb-4">
+      <p className="text-textLight text-sm leading-[1.5rem] font-medium mb-4">
         {description}
       </p>
 
