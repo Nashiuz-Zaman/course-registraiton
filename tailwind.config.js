@@ -8,7 +8,7 @@ export default {
         textLight: "#1c1b1b99",
         primary: "#2F80ED",
         primaryDark: "#2a73d5",
-        warning: "#CB0B0B",
+        danger: "#CB0B0B",
       },
       borderRadius: {
         default: "8px",
